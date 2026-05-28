@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой сайт</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">Studio</a>
+      <ul class="nav-links">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">☀</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <p class="hero-label">Добро пожаловать</p>
+        <h1>Простой и красивый веб-сайт</h1>
+        <p class="hero-text">
+          Создан на HTML, CSS и JavaScript. Без фреймворков — только чистый код и приятный интерфейс.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Связаться</a>
+          <a href="#about" class="btn btn-outline">Узнать больше</a>
+        </div>
+      </div>
+      <div class="hero-shape"></div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">О проекте</h2>
+        <div class="cards">
+          <article class="card">
+            <span class="card-icon">01</span>
+            <h3>HTML</h3>
+            <p>Семантическая разметка для структуры страницы и доступности.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">02</span>
+            <h3>CSS</h3>
+            <p>Адаптивная вёрстка, анимации и переключение светлой и тёмной темы.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">03</span>
+            <h3>JavaScript</h3>
+            <p>Интерактивное меню, форма обратной связи и плавная прокрутка.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Услуги</h2>
+        <ul class="services-list">
+          <li class="service-item">
+            <button class="service-btn active" data-service="design">Дизайн</button>
+          </li>
+          <li class="service-item">
+            <button class="service-btn" data-service="dev">Разработка</button>
+          </li>
+          <li class="service-item">
+            <button class="service-btn" data-service="support">Поддержка</button>
+          </li>
+        </ul>
+        <div class="service-panel" id="servicePanel">
+          <h3 id="serviceTitle">Дизайн</h3>
+          <p id="serviceDesc">Создаём понятные и современные интерфейсы, которые нравятся пользователям.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-wrapper">
+        <div class="contact-info">
+          <h2 class="section-title">Контакты</h2>
+          <p>Оставьте сообщение — форма проверяется прямо в браузере.</p>
+          <ul class="contact-details">
+            <li>📧 hello@example.com</li>
+            <li>📍 Алматы, Казахстан</li>
+          </ul>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="4" placeholder="Ваше сообщение..." required></textarea>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+          <p class="form-success" id="formSuccess" hidden>Сообщение отправлено! Спасибо.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Studio. Сделано с HTML, CSS и JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
